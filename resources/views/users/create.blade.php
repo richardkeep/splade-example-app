@@ -3,9 +3,6 @@
         {{ __('Docs') }}
     </x-slot>
     <x-splade-modal>
-        <x-splade-errors>
-            <p>Name errors: <span v-text="errors.name?.length" /></p>
-        </x-splade-errors>
         <x-splade-form :action="route('users.store')">
             <div>
                 <input v-model="form.name" type="text" />

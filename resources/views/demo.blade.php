@@ -11,11 +11,11 @@
     </x-panel>
 
     <x-panel>
-        <h3 class="text-base font-bold text-red-500 uppercase">Defer</h3>
+        <h3 class="text-base font-bold text-blue-500 uppercase">Defer</h3>
 
-        <x-splade-defer method="GET" url="/api/quote">
+        <x-splade-defer method="POST" url="/api/quote" request="{hello: 'world'}">
             <div v-show="processing">Loading...</div>
-            <div>@{{ response.xx }}</div>
+            <div v-text="response.hello"></div>
         </x-splade-defer>
     </x-panel>
 
@@ -35,6 +35,10 @@
 
     <x-panel>
         <h3 class="text-base font-bold text-blue-500 uppercase">Event</h3>
+        <x-splade-form action="api/fire-event" method="POST">
+            <button>Test</button>
+            <p v-show="form.processing">Testing...</p>
+        </x-splade-form>
         <x-splade-event channel="foo" listen="HighServerLoadDetected">
             <div v-for="event in events">
                 <p v-text="event.name" />
@@ -44,7 +48,7 @@
     </x-panel>
 
     <x-panel>
-        <h3 class="text-base font-bold text-red-500 uppercase">Data</h3>
+        <h3 class="text-base font-bold text-blue-500 uppercase">Data</h3>
 
         <x-splade-data remember="foo" default="{name: 'Richard'}" local-storage>
             <input type="text" v-model="data.name">
@@ -54,7 +58,7 @@
     <x-panel>
         <h3 class="text-base font-bold text-red-500 uppercase">Forms</h3>
 
-        <Link modal href="{{ route('users.create') }}">Add users</Link>
+        <Link slideover href="{{ route('users.create') }}">Add users</Link>
 
         <x-splade-state>
             <div v-for="user in state.shared.users" v-text="user.name"></div>

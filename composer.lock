@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "46bbb905760bc03323dd1aa8ae7e1c0d",
+    "content-hash": "9752469e1065d7b807f9c7c9c55b5a0d",
     "packages": [
         {
             "name": "brick/math",
@@ -2301,11 +2301,17 @@
         },
         {
             "name": "protonemedia/laravel-splade",
-            "version": "dev-main",
+            "version": "0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/protonemedia/laravel-splade.git",
+                "reference": "eb20855e88b8000e7d035f6104f4cc12a81171de"
+            },
             "dist": {
-                "type": "path",
-                "url": "./laravel-splade",
-                "reference": "9e85a3b335b105b37d6a38bc3f997613be50fd56"
+                "type": "zip",
+                "url": "https://api.github.com/repos/protonemedia/laravel-splade/zipball/eb20855e88b8000e7d035f6104f4cc12a81171de",
+                "reference": "eb20855e88b8000e7d035f6104f4cc12a81171de",
+                "shasum": ""
             },
             "require": {
                 "illuminate/contracts": "^9.0",
@@ -2337,25 +2343,7 @@
                     "ProtoneMedia\\Splade\\": "src"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "ProtoneMedia\\Splade\\Tests\\": "tests"
-                }
-            },
-            "scripts": {
-                "analyse": [
-                    "vendor/bin/phpstan analyse"
-                ],
-                "test": [
-                    "vendor/bin/pest"
-                ],
-                "test-coverage": [
-                    "vendor/bin/pest --coverage"
-                ],
-                "format": [
-                    "vendor/bin/pint"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2373,9 +2361,17 @@
                 "laravel-splade",
                 "protonemedia"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/protonemedia/laravel-splade/issues",
+                "source": "https://github.com/protonemedia/laravel-splade/tree/0.1.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/pascalbaljet",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-07-25T13:57:19+00:00"
         },
         {
             "name": "psr/container",
@@ -8191,9 +8187,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "protonemedia/laravel-splade": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

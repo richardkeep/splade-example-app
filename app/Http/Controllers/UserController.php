@@ -28,8 +28,6 @@ class UserController extends Controller
      */
     public function create()
     {
-        // event(new HighServerLoadDetected());
-
         return view('users.create');
     }
 
