@@ -26,6 +26,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Splade::share('adminLastSeenAt', now());
-        Splade::share('users', User::all());
+        //
     }
 }
