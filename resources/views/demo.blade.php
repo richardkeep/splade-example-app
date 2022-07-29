@@ -58,7 +58,7 @@
     <x-panel>
         <h3 class="text-base font-bold text-red-500 uppercase">Forms</h3>
 
-        <Link slideover href="{{ route('users.create') }}">Add users</Link>
+        <Link modal href="{{ route('users.create') }}">Add users</Link>
 
         <x-splade-state>
             <div v-for="user in state.shared.users" v-text="user.name"></div>

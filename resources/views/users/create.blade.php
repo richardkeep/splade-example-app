@@ -2,7 +2,7 @@
     <x-slot name="header">
         {{ __('Docs') }}
     </x-slot>
-    <x-splade-modal>
+    <x-splade-modal :close-button="true">
         <x-splade-form :action="route('users.store')">
             <div>
                 <input v-model="form.name" type="text" />
